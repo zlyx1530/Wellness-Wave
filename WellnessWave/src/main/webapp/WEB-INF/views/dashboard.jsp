@@ -6,6 +6,23 @@
 </head>
 <body>
     <h2>WellnessWave Dashboard</h2>
-    <!-- Page is blank for now add stuff later -->
+    <a href="insertWellnessData">Insert Wellness Data</a>
+ <h3>Wellness Data:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Metric Name</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <c:forEach var="data" items="${wellnessData}">
+                <tr>
+                    <td>${data.metricName}</td>
+                    <td>${data.value}</td>
+                </tr>
+            </c:forEach>
+        </tbody>
+    </table>
 </body>
 </html>
