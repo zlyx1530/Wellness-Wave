@@ -10,7 +10,6 @@ public class UserRepository {
 
     private Connection connection;
 
-    // Constructor to initialize connection, you should replace this with your actual database connection logic
     public UserRepository() throws SQLException {
         this.connection = DatabaseConnection.getConnection(); // Assigning to class field
     }

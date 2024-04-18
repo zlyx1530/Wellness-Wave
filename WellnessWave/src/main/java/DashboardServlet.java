@@ -14,22 +14,14 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/dashboard")
 public class DashboardServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Check if user is logged in
         User loggedInUser = (User) request.getSession().getAttribute("loggedInUser");
         if (loggedInUser != null) {
-            // Retrieve wellness metrics for the logged-in user
             List<WellnessData> wellnessData = retrieveWellnessData(loggedInUser.getId());
-
-            // Print the received list to the console
             System.out.println("Received wellness data: " + wellnessData);
-
-            // Set wellness data as request attribute
             request.setAttribute("wellnessData", wellnessData);
 
-            // Forward the request to the dashboard page
             request.getRequestDispatcher("/WEB-INF/views/dashboard.jsp").forward(request, response);
         } else {
-            // User is not logged in, redirect to login page
             response.sendRedirect(request.getContextPath() + "/login");
         }
     }
@@ -37,7 +29,6 @@ public class DashboardServlet extends HttpServlet {
     private List<WellnessData> retrieveWellnessData(long userId) {
         List<WellnessData> wellnessData = new ArrayList<>();
         try (Connection connection = DatabaseConnection.getConnection()) {
-            // Debug statement to verify connection
             System.out.println("Connection established successfully.");
 
             String query = "SELECT metric_name, value FROM health_metrics WHERE user_id = ?";
