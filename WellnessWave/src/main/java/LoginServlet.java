@@ -37,19 +37,17 @@ public class LoginServlet extends HttpServlet {
         if (userOptional.isPresent()) {
             User user = userOptional.get();
             if (password.equals(user.getPassword())) {
-                // Login successful, redirect to dashboard
-                request.getSession().setAttribute("user", user); // Store user object in session for later use
+                // Login successful, set session attribute
+                request.getSession().setAttribute("loggedInUser", user);
                 response.sendRedirect(request.getContextPath() + "/dashboard");
-            } else {
-                // Password incorrect, show login page with error message
-                request.setAttribute("errorMessage", "Incorrect password");
-                request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+                return;
             }
-        } else {
-            // User not found, show login page with error message
-            request.setAttribute("errorMessage", "User not found");
-            request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
         }
+
+        // If login fails, show login page with error message
+        request.setAttribute("errorMessage", "Invalid username or password");
+        request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
     }
+
 }
 
