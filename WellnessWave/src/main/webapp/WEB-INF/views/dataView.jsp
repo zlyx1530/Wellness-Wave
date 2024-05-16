@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>WellnessWave Data View</title>
+    <style><%@include file="/../../css/format.css"%></style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0"></script>
 </head>
