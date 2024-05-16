@@ -1,0 +1,40 @@
+@charset "ISO-8859-1";
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: white; /*Text Color FYI*/
+	background-color: #222629;
+	min-height: 100vh;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+header {
+	display: flex;
+	background-color: #852A2A;
+	color: #86C232;
+	padding: 20px;
+	justify-content: center;
+	align-items: center;
+	font-size: 45px;
+}
+h2 {
+	font-size: 40px;
+	color: #86C232;
+}
+
+.box {
+	background-color: grey;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+footer {
+    background-color: #474B4F; 
+    color: #86C232;
+    padding: 10px; 
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%
+}
