@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Delete Row</title>
+    <style><%@include file="/../../css/format.css"%></style>
 </head>
 <body>
     <h2>Delete Row</h2>
