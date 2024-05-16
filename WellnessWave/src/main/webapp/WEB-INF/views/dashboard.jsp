@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>WellnessWave Dashboard</title>
+    <style><%@include file="/../../css/format.css"%></style>
 </head>
 <body>
     <h2>WellnessWave Dashboard</h2>
