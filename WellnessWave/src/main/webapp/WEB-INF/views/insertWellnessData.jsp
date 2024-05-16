@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert Wellness Data</title>
-    <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/format.css">
+    <style><%@include file="/../../css/format.css"%></style>
 </head>
 <body>
     <h2>Insert Wellness Data</h2>
