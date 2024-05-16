@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Delete Data</title>
+    <style><%@include file="/../../css/format.css"%></style>
 </head>
 <body>
 <a href="${pageContext.request.contextPath}/dashboard">Back to Dashboard</a>

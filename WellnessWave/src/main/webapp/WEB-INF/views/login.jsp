@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>WellnessWave Login Page</title>
+    <style><%@include file="/../../css/format.css"%></style>
 </head>
 <body>
     <h2>WellnessWave Login Page</h2>
